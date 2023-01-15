@@ -1,0 +1,142 @@
+@import url(./fonts.css);
+
+body { /*OPTIONAL*/
+    margin: 0;
+    padding: 0;
+    background-color: #0D1A2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+a { /*OPTIONAL*/
+    text-decoration: none;
+    color: inherit;
+}
+
+.nft-component {
+    width: 310px;
+    background-color: #15273F;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 10px rgb(0 0 0 / 25%);
+    padding: 25px;
+    font-family: 'Outfit';
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.nft-component > .nft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nft-component .nft > * {
+    margin: 0;
+}
+
+.nft-component .nft-image-wrapper {
+    height: 310px;
+    position: relative;
+}
+
+.nft-component .nft-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nft-component .nft-image-wrapper:hover .nft-image-preview {
+    opacity: 1;
+}
+
+.nft-component .nft-image-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.nft-component .nft-image-preview svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.nft-component .nft-image-preview__bg {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%);
+    opacity: .5;
+}
+
+.nft-component .nft-title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.nft-component .nft-title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.nft-component .nft-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nft-component .nft-info span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nft-component .nft-info__price {
+    color: hsl(178, 100%, 50%);
+}
+
+.nft-component .nft__line {
+    width: 100%;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+}
+
+.nft-component .nft-author {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nft-component .nft-author-avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    border: 1px solid #FFFFFF;
+}
+
+.nft-component .nft-author a {
+    color: #FFFFFF;
+}
+
+.nft-component .nft-author a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+    .nft-component > .nft {
+        gap: 15px;
+    }
+}
